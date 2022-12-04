@@ -1,20 +1,21 @@
 import React from "react";
+import Card from "../../../shared/components/UIElements/Card";
 import UserItem from "../userItem/UserItem";
 import * as S from "./UserListStyles";
 
 const UserList = (props: any) => {
-  console.log(props);
-  // const { test } = item;
-  // if (items.length === 0) {
-  //   return (
-  //     <S.Center>
-  //       <h2>No Users, found.</h2>
-  //     </S.Center>
-  //   );
-  // }
+  if (props.items.length === 0) {
+    return (
+      <S.Center>
+        <Card>
+          <h2>No Users, found.</h2>
+        </Card>
+      </S.Center>
+    );
+  }
 
   return (
-    <>
+    <S.UserList>
       {props.items.map((el: any) => (
         <div key={el.id}>
           <UserItem
@@ -26,8 +27,7 @@ const UserList = (props: any) => {
           />
         </div>
       ))}
-      {/* <div>{items.id}</div> */}
-    </>
+    </S.UserList>
   );
 };
 
