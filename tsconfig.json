@@ -24,7 +24,8 @@
     "src/user/components/userList/UserList.js",
     "src/user/components/userItem/UserItem.js",
     "src/shared/components/Navigation/SideDrawer/SideDrawer.tsx",
-    "src/shared/components/Navigation/SideDrawer/SideDrawer.tsx"
+    "src/shared/components/Navigation/SideDrawer/SideDrawer.tsx",
+    "src/places/pages/NewPlace.tsx"
   ],
   "exclude": ["node_modules"]
 }
