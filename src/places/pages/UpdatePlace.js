@@ -61,7 +61,6 @@ const UpdatePlace = () => {
   }, [sendRequest, placeId, setFormData]);
 
   const placeUpdateSubmitHandler = async (event) => {
-    console.log(placeId);
     event.preventDefault();
     try {
       await sendRequest(
@@ -73,6 +72,7 @@ const UpdatePlace = () => {
         }),
         {
           "Content-Type": "application/json",
+          Authorization: `Bearer ${auth.token}`,
         }
       );
       navigate("/" + auth.userId + "/places");
